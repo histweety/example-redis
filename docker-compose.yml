@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  redis:
+    image: redis:latest
+    ports:
+      - "6379:6379"  # service port 6379 to expose port 6379
+    volumes:
+      - ./redis-data:/data  # service volume to persist data
+      - ./redis-conf:/usr/local/etc/redis # service volume to persist configuration
+    command: ["redis-server", "/usr/local/etc/redis/redis.conf"]  # service command to run redis server with custom configuration

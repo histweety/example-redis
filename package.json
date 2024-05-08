@@ -1,0 +1,11 @@
+{
+  "type": "module",
+  "scripts": {
+    "check-connection": "node check-connection.js",
+    "simple-store": "node simple-store.js",
+    "pubsub-runner": "node pub-sub.js"
+  },
+  "dependencies": {
+    "redis": "^4.6.13"
+  }
+}
